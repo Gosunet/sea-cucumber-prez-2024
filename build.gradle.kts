@@ -6,9 +6,6 @@ plugins {
 
 cup {
     targetDesktop()
-
-    // TODO: If you comment this (you don't want to export your presentation as a web page),
-    //  you must remove the .github/workflows/pages.yml file as well.
     targetWeb()
 }
 

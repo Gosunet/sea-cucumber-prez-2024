@@ -8,3 +8,5 @@ Format of the talk is [Pecha Kucha](https://www.pechakucha.com/)
 20 slides, 20 secondes each.
 
 The prez is done with [Compose ur Prez](https://github.com/KodeinKoders/CuP) 🙌
+
+The latest WASM version of the prez is available [here](https://gosunet.github.io/sea-cucumber-prez-2024/)
