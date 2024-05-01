@@ -18,8 +18,6 @@ kotlin {
             // Includes Source Code highlighting & animations.
             implementation(cup.sourceCode)
 
-            // TODO: Select plugins (comment or uncomment function of your needs)
-
             // Secondary window with preview & speaker notes.
             implementation(cup.plugin.speakerWindow)
 
@@ -27,11 +25,8 @@ kotlin {
             // This tool is also part of the Speaker Mode window.
             implementation(cup.plugin.laser)
 
-            // TODO: Select material or material3 (for composables such as Text).
-            implementation(compose.material)
-//            implementation(compose.material3)
-            implementation("org.kodein.emoji:emoji-compose-m2:1.3.0")
-//            implementation("org.kodein.emoji:emoji-compose-m3:1.3.0")
+            implementation(compose.material3)
+            implementation("org.kodein.emoji:emoji-compose-m3:1.3.0")
         }
     }
 }

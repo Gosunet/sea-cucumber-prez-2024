@@ -1,44 +1,61 @@
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
+import androidx.compose.ui.graphics.Color
 import net.kodein.cup.Presentation
 import net.kodein.cup.Slides
 import net.kodein.cup.cupApplication
 import net.kodein.cup.laser.laser
 import net.kodein.cup.speaker.speakerWindow
-import net.kodein.cup.ui.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
+import slides.conclusion
+import slides.gherkinSample
+import slides.gherkinSample1Steps
+import slides.gherkinSample2
+import slides.gherkinSample3
+import slides.gherkinSample3b
+import slides.gherkinSample3c
+import slides.howToImpl
 import slides.intro
-import slides.todo
+import slides.modernStack
+import slides.notGherkins
+import slides.runIt
+import slides.stillRelevant
+import slides.thanks
+import slides.whatIsCucumber
+import slides.whatIsCucumber2
+import slides.whatIsGherkins
+import slides.whenUse
+import slides.whyUse
+import slides.whyUse2
 
 
 fun main() = cupApplication(
-    // TODO: Change title
-    title = "My Amazing Presentation!"
+    title = "(Sea 🌊) Cucumber in 2024"
 ) {
     remember {
-        // https://github.com/kosi-libs/Emoji.kt?tab=readme-ov-file#initializing-the-emoji-service
         EmojiService.initialize()
     }
 
     MaterialTheme(
-        // TODO: Apply your theme
-        colors = darkColors(),
+        colorScheme = darkColorScheme().copy(
+            primary = Color.White,
+            tertiary = Color(238, 34, 56)
+        ),
         typography = MaterialTheme.typography.cupScaleDown()
     ) {
         Presentation(
             slides = presentationSlides,
             configuration = {
-                // TODO: Configure plugins
                 speakerWindow()
                 laser()
             },
-            backgroundColor = MaterialTheme.colors.background
+            backgroundColor = MaterialTheme.colorScheme.background
         ) { slidesContent ->
             CompositionLocalProvider(
-                LocalContentColor provides MaterialTheme.colors.onBackground
+                LocalContentColor provides MaterialTheme.colorScheme.onBackground
             ) {
                 slidesContent()
             }
@@ -46,8 +63,26 @@ fun main() = cupApplication(
     }
 }
 
-// TODO: Write your own slides!
+
 val presentationSlides = Slides(
     intro,
-    todo
+    whatIsCucumber,
+    whatIsCucumber2,
+    notGherkins,
+    whatIsGherkins,
+    gherkinSample,
+    gherkinSample1Steps,
+    gherkinSample2,
+    gherkinSample3,
+    gherkinSample3b,
+    gherkinSample3c,
+    whyUse,
+    whyUse2,
+    whenUse,
+    stillRelevant,
+    modernStack,
+    howToImpl,
+    runIt,
+    conclusion,
+    thanks,
 )

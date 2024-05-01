@@ -1,37 +1,43 @@
 package slides
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import cup_presentation_template.generated.resources.Res
-import cup_presentation_template.generated.resources.cup
 import net.kodein.cup.Slide
-import net.kodein.cup.ui.styled
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import org.kodein.emoji.Emoji
-import org.kodein.emoji.compose.m2.TextWithPlatformEmoji
-import org.kodein.emoji.smileys_emotion.face_smiling.Wink
+import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
+import org.kodein.emoji.travel_places.sky_weather.WaterWave
+import sea_cucumber_prez_2024.generated.resources.Res
+import sea_cucumber_prez_2024.generated.resources.zenika
 
 
 @OptIn(ExperimentalResourceApi::class)
-val intro by Slide {
+val intro by Slide(stepCount = 2) { step ->
     Image(
-        painterResource(Res.drawable.cup),
-        contentDescription = "Compose ur Pres",
+        painterResource(Res.drawable.zenika),
+        contentDescription = "Zenika",
         modifier = Modifier
-            .size(96.dp)
-            .clip(CircleShape)
+            .size(180.dp)
+    )
+    TextWithPlatformEmoji(
+        text = "(Sea ${Emoji.WaterWave}) Cucumber in 2024",
+        style = MaterialTheme.typography.displayLarge
     )
 
-    Text(
-        text = "Hello, friend!",
-        style = MaterialTheme.typography.h1
-    )
-    TextWithPlatformEmoji(styled { "Welcome to ${+b}Compose ur Pres${-b}! ${Emoji.Wink}" })
+    AnimatedVisibility(
+        visible = step >= 1,
+    ) {
+        TextWithPlatformEmoji(
+            text = "Is this still relevant today?",
+            style = MaterialTheme.typography.displayMedium
+        )
+    }
 }
