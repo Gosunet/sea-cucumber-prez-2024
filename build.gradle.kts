@@ -1,7 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.9.23"
     id("org.jetbrains.compose") version "1.6.1"
-    id("net.kodein.cup") version "1.0.0-Beta-01"
+    id("net.kodein.cup") version "1.0.0-Beta-02"
 }
 
 cup {
@@ -14,6 +14,8 @@ kotlin {
         dependencies {
             // Includes Source Code highlighting & animations.
             implementation(cup.sourceCode)
+            // Includes Material Design 3 components.
+            implementation(cup.widgets.material3)
 
             // Secondary window with preview & speaker notes.
             implementation(cup.plugin.speakerWindow)

@@ -2,7 +2,7 @@
 .gradle
 build/
 .gradletasknamecache
-
+local.properties
 ### IntelliJ IDEA ###
 .idea
 

@@ -8,10 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import net.kodein.cup.Slide
 import net.kodein.cup.ui.styled
+import net.kodein.cup.widgets.material3.BulletPoints
 import org.kodein.emoji.Emoji
 import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
 import org.kodein.emoji.food_drink.food_vegetable.Cucumber
-import slides.components.BulletPoints
 import slides.components.MyStyleSheet
 
 

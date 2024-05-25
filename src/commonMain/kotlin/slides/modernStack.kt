@@ -19,7 +19,10 @@ val modernStack by Slide(stepCount = 3) { step ->
         style = MaterialTheme.typography.displayMedium
     )
     AnimatedVisibility(visible = step >= 1) {
-        Column(modifier = Modifier.padding(top = 8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Column(
+            modifier = Modifier.padding(top = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
             Text(
                 modifier = Modifier.padding(vertical = 8.dp),
                 text = "Available for a lot of modern languages, such as Kotlin, Clojure, Python, Javascript (and TS), Go, Rust, etc."

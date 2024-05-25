@@ -9,6 +9,7 @@ import net.kodein.cup.Slides
 import net.kodein.cup.cupApplication
 import net.kodein.cup.laser.laser
 import net.kodein.cup.speaker.speakerWindow
+import net.kodein.cup.widgets.material3.cupScaleDown
 import org.kodein.emoji.compose.EmojiService
 import slides.conclusion
 import slides.gherkinSample
@@ -41,7 +42,6 @@ fun main() = cupApplication(
 
     MaterialTheme(
         colorScheme = darkColorScheme().copy(
-            primary = Color.White,
             tertiary = Color(238, 34, 56)
         ),
         typography = MaterialTheme.typography.cupScaleDown()

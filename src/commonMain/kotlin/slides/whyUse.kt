@@ -8,13 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import net.kodein.cup.Slide
 import net.kodein.cup.ui.styled
-import org.kodein.emoji.Emoji
-import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
-import org.kodein.emoji.food_drink.food_vegetable.Cucumber
-import slides.components.BulletPoints
+import net.kodein.cup.widgets.material3.BulletPoints
 import slides.components.MyStyleSheet
-import slides.components.MyStyleSheet.unaryMinus
-import slides.components.MyStyleSheet.unaryPlus
 
 val whyUse by Slide(stepCount = 4) { step ->
     Text(
@@ -30,12 +25,12 @@ val whyUse by Slide(stepCount = 4) { step ->
         }
         BulletPoint(visible = step >= 2) {
             Row {
-                Text("Improved communication")
+                Text("Improved collaboration")
             }
         }
         BulletPoint(visible = step >= 3) {
             Row {
-                Text("Improved collaboration")
+                Text("Good integration and community")
             }
         }
     }

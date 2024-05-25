@@ -8,14 +8,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import net.kodein.cup.Slide
 import net.kodein.cup.ui.styled
+import net.kodein.cup.widgets.material3.BulletPoints
 import org.kodein.emoji.Emoji
 import org.kodein.emoji.compose.m3.TextWithPlatformEmoji
 import org.kodein.emoji.objects.book_paper.Notebook
 import org.kodein.emoji.people_body.body_parts.Muscle
 import org.kodein.emoji.people_body.person_role.Student
-import org.kodein.emoji.symbols.other_symbol.CheckMark
 import org.kodein.emoji.symbols.other_symbol.CheckMarkGreen
-import slides.components.BulletPoints
 import slides.components.MyStyleSheet
 
 val conclusion by Slide(stepCount = 5) { step ->
