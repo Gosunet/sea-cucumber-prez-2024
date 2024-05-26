@@ -13,7 +13,7 @@ import net.kodein.cup.ui.styled
 import slides.components.Link
 import slides.components.MyStyleSheet
 
-val modernStack by Slide(stepCount = 3) { step ->
+val modernStack by Slide(stepCount = 2) { step ->
     Text(
         text = styled(MyStyleSheet) { "Can y use it in my stack?" },
         style = MaterialTheme.typography.displayMedium
